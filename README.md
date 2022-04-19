@@ -1,4 +1,4 @@
-Laravel Relation with Eloquent :
+Laravel 9 Relational Tables with Eloquent :
 
 1. One to One
 2. One to Many
