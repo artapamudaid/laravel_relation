@@ -7,6 +7,13 @@
     @endforeach
 </ul>
 
+<h3>Tags</h3>
+<ul>
+    @foreach ($lesson->tags as $tag)
+    <li>{{ $tag->name }}</li>
+    @endforeach
+</ul>
+
 <h3>Jumlah Likes</h3>
 <p>
     {{$lesson->likes->count()}}
