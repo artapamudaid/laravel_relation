@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Forum;
 use App\Models\Lesson;
 use App\Models\Passport;
 use App\Models\User;
@@ -21,6 +22,13 @@ class UserController extends Controller
         $passport = Passport::findOrFail($id);
 
         return view('user.passport', compact('passport'));
+    }
+
+    public function showForum($id)
+    {
+        $forum = Forum::findOrFail($id);
+
+        return view('user.forum', compact('forum'));
     }
 
     public function showLesson($id)

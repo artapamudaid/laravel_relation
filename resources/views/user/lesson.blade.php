@@ -6,3 +6,8 @@
     <li>{{ $user->name }}</li>
     @endforeach
 </ul>
+
+<h3>Jumlah Likes</h3>
+<p>
+    {{$lesson->likes->count()}}
+</p>

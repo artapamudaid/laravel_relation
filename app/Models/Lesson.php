@@ -13,4 +13,9 @@ class Lesson extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    public function likes()
+    {
+        return $this->morphMany(Like::class, 'likeable');
+    }
 }
