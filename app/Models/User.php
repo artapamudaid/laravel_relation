@@ -16,4 +16,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Passport::class, 'user_id', 'id');
     }
+
+    public function forums()
+    {
+        return $this->hasMany(Forum::class, 'user_id', 'id');
+    }
 }
