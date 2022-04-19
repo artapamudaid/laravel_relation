@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('user/{id}', [UserController::class, 'showProfile']);
 Route::get('passport/{id}', [UserController::class, 'showPassport']);
+Route::get('lesson/{id}', [UserController::class, 'showLesson']);

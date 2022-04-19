@@ -21,4 +21,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Forum::class, 'user_id', 'id');
     }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class);
+    }
 }
