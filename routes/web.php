@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 Route::get('user/{id}', [UserController::class, 'showProfile']);
 Route::get('passport/{id}', [UserController::class, 'showPassport']);
-Route::get('forum/{id}', [UserController::class, 'showForum']);
 Route::get('lesson/{id}', [UserController::class, 'showLesson']);
+Route::get('forum/create', [UserController::class, 'createForum']);
+Route::get('forum/{id}', [UserController::class, 'showForum']);
