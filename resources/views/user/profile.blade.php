@@ -4,13 +4,25 @@
 <h3>Daftar Forum</h3>
 <ul>
     @foreach ($user->forums as $forum)
-    <li>{{ $forum->title }}</li>
+    <li>
+        {{ $forum->title }}
+        || tags :
+        @foreach ($forum->tags as $tag)
+        {{ $tag->name }}
+        @endforeach
+    </li>
     @endforeach
 </ul>
 
 <h3>Daftar Kelas</h3>
 <ul>
     @foreach ($user->lessons as $lesson)
-    <li>{{ $lesson->title }}</li>
+    <li>
+        {{ $lesson->title }}
+        || tags :
+        @foreach ($lesson->tags as $tag)
+        {{ $tag->name }}
+        @endforeach
+    </li>
     @endforeach
 </ul>
