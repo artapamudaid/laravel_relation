@@ -19,10 +19,10 @@ class UserController extends Controller
         //     }
         // ])->where('id', $id)->first();
 
-        //contoh withCount
+        //example for withCount
         $forums = User::withCount('forums')->get();
 
-        //contoh hasManyThrough
+        //example for hasManyThrough
         // dd(City::find(2)->forums);
 
         $user = User::with('forums.tags', 'lessons.tags')->where('id', $id)->first();
