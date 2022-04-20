@@ -20,7 +20,11 @@ Route::get('/', function () {
 
 Route::get('user/{id}', [UserController::class, 'showProfile']);
 Route::get('passport/{id}', [UserController::class, 'showPassport']);
+
+Route::get('lesson/create', [UserController::class, 'createLesson']);
+Route::get('lesson/delete', [UserController::class, 'deleteLesson']);
 Route::get('lesson/{id}', [UserController::class, 'showLesson']);
+
 Route::get('forum/create', [UserController::class, 'createForum']);
 Route::get('forum/update', [UserController::class, 'updateForum']);
 Route::get('forum/delete', [UserController::class, 'deleteForum']);
