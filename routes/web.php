@@ -23,6 +23,8 @@ Route::get('passport/{id}', [UserController::class, 'showPassport']);
 
 Route::get('lesson/create', [UserController::class, 'createLesson']);
 Route::get('lesson/delete', [UserController::class, 'deleteLesson']);
+Route::get('lesson/update', [UserController::class, 'updateLesson']);
+Route::get('lesson/sync', [UserController::class, 'syncLesson']);
 Route::get('lesson/{id}', [UserController::class, 'showLesson']);
 
 Route::get('forum/create', [UserController::class, 'createForum']);
