@@ -70,6 +70,23 @@ class UserController extends Controller
         ]);
     }
 
+    public function updateForum()
+    {
+        $forum = Forum::find(3);
+        $user = User::find(1);
+
+        $forum->user()->associate($user);
+        $forum->save();
+    }
+
+    public function deleteForum()
+    {
+        $forum = Forum::find(3);
+
+        $forum->user()->dissociate();
+        $forum->save();
+    }
+
     public function showLesson($id)
     {
         $lesson = Lesson::findOrFail($id);
