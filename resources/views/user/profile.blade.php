@@ -13,6 +13,18 @@
     </li>
     @endforeach
 </ul>
+{{-- with builder --}}
+{{-- <ul>
+    @foreach ($user->forums()->has('tags')->get() as $forum)
+    <li>
+        {{ $forum->title }}
+        || tags :
+        @foreach ($forum->tags as $tag)
+        {{ $tag->name }}
+        @endforeach
+    </li>
+    @endforeach
+</ul> --}}
 
 <h3>Daftar Kelas</h3>
 <ul>
@@ -26,3 +38,7 @@
     </li>
     @endforeach
 </ul>
+
+@foreach ($forums as $forum)
+{{ $forum->name }} : {{ $forum->forums_count }} <br>
+@endforeach

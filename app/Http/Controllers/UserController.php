@@ -18,9 +18,11 @@ class UserController extends Controller
         //     }
         // ])->where('id', $id)->first();
 
+        $forums = User::withCount('forums')->get();
+
         $user = User::with('forums.tags', 'lessons.tags')->where('id', $id)->first();
 
-        return view('user.profile', compact('user'));
+        return view('user.profile', compact('user', 'forums'));
     }
 
     public function showPassport($id)
