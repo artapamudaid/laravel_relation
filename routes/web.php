@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('user/{id}', [UserController::class, 'showProfile']);
+
+Route::get('passport/edit', [UserController::class, 'editPassport']);
 Route::get('passport/{id}', [UserController::class, 'showPassport']);
 
 Route::get('lesson/create', [UserController::class, 'createLesson']);

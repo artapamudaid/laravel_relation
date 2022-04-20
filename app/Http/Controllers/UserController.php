@@ -37,6 +37,13 @@ class UserController extends Controller
         return view('user.passport', compact('passport'));
     }
 
+    public function editPassport()
+    {
+        $passport = Passport::find(1);
+        $passport->no_pass = '940qia00';
+        $passport->save();
+    }
+
     public function showForum($id)
     {
         $forum = Forum::findOrFail($id);
